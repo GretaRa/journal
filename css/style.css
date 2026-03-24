@@ -1,10 +1,134 @@
 html, 
 body,
-ul {
+ul,
+h1,
+h2,
+h3,
+p {
     margin: 0;
     padding: 0;
 }
 
 ul{
     list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a,button{
+    cursor: pointer;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: "Source Sans 3", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 1.25em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    filter: drop-shadow(#0e0e0e4b 0 0.25rem 2px);
+    font-weight: bold;
+}
+
+header ul{
+    display: flex;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+/* Hero */
+
+.hero-post{
+    background-image: url(../images/article-image-hero.png);
+    background-size: cover;
+    color: white;
+    padding: 5em 1.25em 1.25em;
+}
+
+.hero-date{
+    text-transform: uppercase;
+}
+
+.hero-title{
+    line-height: 1.2;
+}
+
+.hero-text{
+    font-size: 1.125rem;
+    padding: 5px 0;
+}
+
+/* Article listing */
+
+.article-listing{
+    padding: 2.125em 1.25em;
+    display: grid;
+    grid-template-columns: 374px;
+    justify-content: center;
+    gap: 2.5em;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    
+}
+
+.article-date{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.article-description{
+    color: #505050;
+    line-height: 1.25;
+}
+
+.more-btn{
+    border: none;
+    background-color: inherit;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+/* Footer */
+
+footer{
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+    padding: 2.5em 1em;
+}
+
+footer h3{
+    color: #ECECEC;
+    
+}
+
+footer p {
+    color: #D7D7D7;
 }
