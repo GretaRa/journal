@@ -37,7 +37,6 @@ header{
     justify-content: space-between;
     align-items: center;
     font-weight: 500;
-    font-size: 0.85rem;
     padding: 1.25em;
 }
 
@@ -55,6 +54,10 @@ header ul{
     text-transform: uppercase;
 }
 
+main{
+    display: grid;
+}
+
 /* Hero */
 
 .hero-post{
@@ -62,6 +65,8 @@ header ul{
     background-size: cover;
     color: white;
     padding: 5em 1.25em 1.25em;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-date{
@@ -92,6 +97,10 @@ header ul{
     flex-direction: column;
     gap: 0.5em;
     
+}
+
+.article img{
+    max-height: 232px;
 }
 
 .article-date{
@@ -131,4 +140,36 @@ footer h3{
 
 footer p {
     color: #D7D7D7;
+}
+
+@media (min-width: 768px){
+    .logo{
+        font-size: 1.25rem;
+    }
+
+    main{
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .hero-post{
+        justify-content: end;
+        padding: 3.25em;
+    }
+
+    .hero-title{
+        font-size: 2.5rem;
+    }
+
+    .hero-text{
+        max-width: 700px;
+    }
+
+    .article-listing{
+        grid-template-columns: repeat(3, minmax(374px, 1fr));
+        padding: 3.25em;
+    }
+
+    .more-btn{
+        grid-column: 2/3;
+    }
 }
