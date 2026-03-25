@@ -93,14 +93,14 @@ main{
 }
 
 .article{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 232px 0.5fr 1fr 2fr;
     gap: 0.5em;
-    
 }
 
-.article img{
-    max-height: 232px;
+.article-image {
+    background-size: cover;
+    border-radius: 5px;
 }
 
 .article-date{
@@ -142,7 +142,11 @@ footer p {
     color: #D7D7D7;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px ){
+    header{
+        padding: 1.25em 3.25em;
+    }
+
     .logo{
         font-size: 1.25rem;
     }
@@ -165,11 +169,20 @@ footer p {
     }
 
     .article-listing{
-        grid-template-columns: repeat(3, minmax(374px, 1fr));
         padding: 3.25em;
+        grid-template-columns: repeat(auto-fit, 374px);
+        grid-auto-flow: dense;
     }
 
     .more-btn{
-        grid-column: 2/3;
+        grid-column: 1/-1;
     }
+}
+
+@media (min-width: 1280px ){
+    .article-listing{
+        grid-template-columns: repeat(3, 374px);
+        padding: 3.25em;
+        grid-auto-flow: dense;
+    } 
 }
