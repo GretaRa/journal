@@ -1,5 +1,7 @@
 import articles from './data.js'
 
+const articleListingEl = document.getElementById('article-listing')
+
 function createArticlesList (articles){
   let articlesList = []
 
@@ -15,13 +17,19 @@ function createArticlesList (articles){
     `
   })
 
-  articlesList += `<button type="button" class="more-btn">View More</button>`
+  articlesList += `<button type="button" id="more-btn">View More</button>`
 
   displayArticles(articlesList)
 }
 
 function displayArticles (articlesList){
-  document.getElementById('article-listing').innerHTML = articlesList
+  articleListingEl.innerHTML = articlesList
 }
 
 createArticlesList(articles)
+  const viewMoreBtn = document.getElementById('more-btn')
+
+  viewMoreBtn.addEventListener('click', () => {
+    articleListingEl.classList.toggle("show-all")
+    viewMoreBtn.style.display = 'none'
+  })

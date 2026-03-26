@@ -92,6 +92,14 @@ main{
     gap: 2.5em;
 }
 
+.article:nth-child(n+4){
+    display: none;
+}
+
+.show-all .article:nth-child(n+4){
+    display: grid;
+}
+
 .article{
     display: grid;
     grid-template-rows: 232px 0.5fr 1fr 2fr;
@@ -113,7 +121,7 @@ main{
     line-height: 1.25;
 }
 
-.more-btn{
+#more-btn{
     border: none;
     background-color: inherit;
     font-weight: bold;
@@ -174,8 +182,12 @@ footer p {
         grid-auto-flow: dense;
     }
 
-    .more-btn{
-        grid-column: 1/-1;
+    .article:nth-child(n+4){
+        display: grid;
+    }
+
+    #more-btn{
+        display: none;
     }
 }
 
