@@ -10,7 +10,7 @@ function createArticlesList (articles){
       <div class="article">
         <div class="article-image" style="background-image: url(${article.image})">
         </div>
-        <p class="article-date">${article.date}</p>
+        <p class="article-date date">${article.date}</p>
         <h2 class="article-title">${article.title}</h2>
         <p class="article-description">${article.description}</p>
       </div>
