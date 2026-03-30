@@ -87,20 +87,6 @@ footer p {
     color: #D7D7D7;
 }
 
-@media (min-width: 1024px ){
-    header{
-        padding: 1.25em 3.25em;
-    }
-
-    .logo{
-        font-size: 1.25rem;
-    }
-
-    main{
-        grid-template-rows: 1fr 2fr;
-    }
-}
-
 /* Article listing */
 
 .article-listing{
@@ -156,42 +142,13 @@ footer p {
         font-size: 1.25rem;
     }
 
-    main{
-        grid-template-rows: 1fr 2fr;
-    }
-
-    .hero-post{
-        justify-content: end;
-        padding: 3.25em;
-    }
-
-    .hero-title{
-        font-size: 2.5rem;
-    }
-
-    .hero-text{
-        max-width: 700px;
-    }
-
     .article-listing{
         padding: 3.25em;
         grid-template-columns: repeat(auto-fit, 374px);
         grid-auto-flow: dense;
     }
 
-    .article:nth-child(n+4){
-        display: grid;
-    }
-
     #more-btn{
         display: none;
     }
-}
-
-@media (min-width: 1280px ){
-    .article-listing{
-        grid-template-columns: repeat(3, 374px);
-        padding: 3.25em;
-        grid-auto-flow: dense;
-    } 
 }

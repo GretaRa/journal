@@ -1,3 +1,7 @@
+main{
+    background-color: #FAFAFA;
+}
+
 .small-title{
   font-size: 1rem;
   padding-bottom: 1.5em;
@@ -7,13 +11,12 @@
   text-align: center;
   padding: 0;
 }
-/* TODO fix larger screens */
+
 .main-article{
   padding: 2em 1.125em ;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  justify-content: center;
 }
 
 .main-article .date{
@@ -24,5 +27,29 @@
   background-image: url("../images/article-image-hero.png");
   background-size: cover;
   aspect-ratio: 16 / 9;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 979px;
+}
+
+@media (min-width: 1024px ){
+
+  main{
+    grid-template-rows: auto;
+    row-gap: 1em;
+  }
+
+  .main-article{
+    max-width: 979px;
+    margin: auto;
+  }
+
+  .text{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .recent-posts,
+  .small-title{
+    font-size: 1.5rem;
+  }
 }
