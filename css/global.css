@@ -48,7 +48,6 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
-    filter: drop-shadow(#0e0e0e4b 0 0.25rem 2px);
     font-weight: bold;
 }
 
@@ -143,7 +142,7 @@ footer p {
     }
 
     .article-listing{
-        padding: 3.25em;
+        padding: 0.5em 3.25em 3.25em 3.25em;
         grid-template-columns: repeat(auto-fit, 374px);
         grid-auto-flow: dense;
     }

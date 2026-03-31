@@ -31,6 +31,27 @@ main{
   max-width: 979px;
 }
 
+/* about page */
+
+.profile{
+  display: grid;
+  row-gap: 1.5em;
+}
+
+.profile-title{
+  align-self: flex-end;
+}
+
+.profile-img{
+  background-image: url("../images/profile-image.png");
+  background-size: cover;
+  aspect-ratio: 16 / 9;
+  max-width: 182px;
+  height: 182px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
 @media (min-width: 1024px ){
 
   main{
@@ -52,4 +73,13 @@ main{
   .small-title{
     font-size: 1.5rem;
   }
+
+  /* About page */
+  .profile{
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 10px;
+  margin-bottom: 2em;
+}
 }
