@@ -1,5 +1,5 @@
 main{
-    background-color: #FAFAFA;
+  background-color: #FAFAFA;
 }
 
 .small-title{
@@ -29,6 +29,10 @@ main{
   aspect-ratio: 16 / 9;
   width: 100%;
   max-width: 979px;
+}
+
+#more-btn{
+  display: none;
 }
 
 /* about page */
